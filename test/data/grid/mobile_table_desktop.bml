@@ -5,18 +5,18 @@
     <title></title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+<container>
+    <r>
+        <c xs12 sm6 md8>.col-xs-12 .col-sm-6 .col-md-8</c>
+        <c xs6 md4>.col-xs-6 .col-md-4</c>
+    </r>
+    <r>
+        <c xs6 sm4>.col-xs-6 .col-sm-4</c>
+        <c xs6 sm4>.col-xs-6 .col-sm-4</c>
         <!-- Optional: clear the XS cols if their content doesn't match in height -->
-        <div class="clearfix visible-xs-block"></div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-    </div>
-</div>
+        <clearfix visible-xs-block/>
+        <c xs6 sm4>.col-xs-6 .col-sm-4</c>
+    </r>
+</container>
 </body>
 </html>

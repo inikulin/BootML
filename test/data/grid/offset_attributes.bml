@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<c offset1></c>
+<c offset2></c>
+<c offset3></c>
+<c offset4></c>
+<c offset5></c>
+<c offset6></c>
+<c offset7></c>
+<c offset8></c>
+<c offset9></c>
+<c offset10></c>
+<c offset11></c>
+<c offset12></c>
+
+<c offset:xs1-md5-sm3></c>
+<c offset:xs1-lg5></c>
+<c offset:sm4></c>
+</body>
+</html>

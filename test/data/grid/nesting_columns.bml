@@ -7,17 +7,17 @@
 <body>
 <container>
     <r>
-        <sm-c9>
+        <c sm9>
             Level 1: .col-sm-9
             <r>
-                <xs-c8 sm-c6>
+                <c xs8 sm6>
                     Level 2: .col-xs-8 .col-sm-6
-                </xs-c8>
-                <xs-c4 sm-c6>
+                </c>
+                <c xs4 sm6>
                     Level 2: .col-xs-4 .col-sm-6
-                </xs-c4>
+                </c>
             </r>
-        </sm-c9>
+        </c>
     </r>
 </container>
 </body>

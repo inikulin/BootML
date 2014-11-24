@@ -8,21 +8,21 @@
 <container>
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <r>
-        <xs-c12 c8>.col-xs-12 .col-md-8</xs-c12>
-        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
+        <c md8 xs12>.col-xs-12 .col-md-8</c>
+        <c md4 xs6>.col-xs-6 .col-md-4</c>
     </r>
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <r>
-        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
-        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
-        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
+        <c xs6 md4>.col-xs-6 .col-md-4</c>
+        <c xs6 md4>.col-xs-6 .col-md-4</c>
+        <c xs6 md4>.col-xs-6 .col-md-4</c>
     </r>
 
     <!-- Columns are always 50% wide, on mobile and desktop -->
     <r>
-        <xs-c6>.col-xs-6</xs-c6>
-        <xs-c6>.col-xs-6</xs-c6>
+        <c xs6>.col-xs-6</c>
+        <c xs6>.col-xs-6</c>
     </r>
 </container>
 </body>

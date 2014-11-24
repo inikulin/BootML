@@ -7,11 +7,11 @@
 <body>
 <container>
     <r>
-        <cxs9>.col-xs-9</cxs9>
-        <cxs4>.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line
+        <c xs9>.col-xs-9</c>
+        <c xs4>.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line
             as one contiguous unit.
-        </cxs4>
-        <cxs6>.col-xs-6<br>Subsequent columns continue along the new line.</cxs6>
+        </c>
+        <c xs6>.col-xs-6<br>Subsequent columns continue along the new line.</c>
     </r>
 </container>
 </body>
