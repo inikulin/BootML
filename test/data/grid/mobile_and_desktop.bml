@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<container>
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <r>
+        <xs-c12 c8>.col-xs-12 .col-md-8</xs-c12>
+        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
+    </r>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <r>
+        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
+        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
+        <xs-c6 c4>.col-xs-6 .col-md-4</xs-c6>
+    </r>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <r>
+        <xs-c6>.col-xs-6</xs-c6>
+        <xs-c6>.col-xs-6</xs-c6>
+    </r>
+</container>
+</body>
+</html>

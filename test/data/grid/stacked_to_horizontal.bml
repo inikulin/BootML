@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<container>
+    <r>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+        <c1>.col-md-1</c1>
+    </r>
+    <r>
+        <c8>.col-md-8</c8>
+        <c4>.col-md-4</c4>
+    </r>
+    <r>
+        <c4>.col-md-4</c4>
+        <c4>.col-md-4</c4>
+        <c4>.col-md-4</c4>
+    </r>
+    <r>
+        <c6>.col-md-6</c6>
+        <c6>.col-md-6</c6>
+    </r>
+</container>
+</body>
+</html>
