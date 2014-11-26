@@ -3,8 +3,8 @@ var fs = require('fs'),
     Mocha = require('mocha');
 
 var mocha = new Mocha()
-        .ui('tdd')
-        .reporter('spec');
+    .ui('tdd')
+    .reporter('spec');
 
 mocha.addFile(path.join(__dirname, './suite'));
 
