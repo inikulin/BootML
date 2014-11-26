@@ -1,4 +1,7 @@
 # BootML
+
+[![Build Status](https://api.travis-ci.org/inikulin/BootML.svg)](https://travis-ci.org/inikulin/BootML)
+
 *Write less, bootstrap more*
 
 1. Grid tags

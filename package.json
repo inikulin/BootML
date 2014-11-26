@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "dependencies": {
+    "ineed": "^1.0.2"
+  },
+  "scripts": {
+    "test": "node test/run_tests.js"
+  }
+}
