@@ -63,6 +63,9 @@ fs.readdirSync(relative('./data')).forEach(function (suiteName) {
                     src = fs.readFileSync(relative('./data', suiteName, testFile)).toString(),
                     expected = fs.readFileSync(relative('./data', suiteName, testName + '.html')).toString();
 
+                if(testName !== 'tags')
+                    return;
+
                 test(testName, function () {
                     var actual = normalizeSpaces(compiler.compile(src));
                     expected = normalizeSpaces(expected);
