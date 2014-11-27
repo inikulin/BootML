@@ -63,7 +63,7 @@ fs.readdirSync(relative('./data')).forEach(function (suiteName) {
                     src = fs.readFileSync(relative('./data', suiteName, testFile)).toString(),
                     expected = fs.readFileSync(relative('./data', suiteName, testName + '.html')).toString();
 
-                if(testName !== 'tags')
+                if(testName !== 'tags' && testName !== 'size_attributes')
                     return;
 
                 test(testName, function () {
