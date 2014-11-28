@@ -59,11 +59,12 @@ fs.readdirSync(relative('./data')).forEach(function (suiteName) {
     suite(suiteName, function () {
         fs.readdirSync(relative('./data', suiteName)).forEach(function (testFile) {
             if (/.boot.html$/.test(testFile)) {
-                var testName = path.basename(testFile, '.boot.html'),
+                var testBasename = path.basename(testFile, '.boot.html'),
                     src = fs.readFileSync(relative('./data', suiteName, testFile)).toString(),
-                    expected = fs.readFileSync(relative('./data', suiteName, testName + '.html')).toString();
+                    expected = fs.readFileSync(relative('./data', suiteName, testBasename + '.html')).toString(),
+                    testName = testBasename.replace(/_/g, ' ');
 
-                if(testName !== 'tags' && testName !== 'size_attributes')
+                if(testBasename !== 'tags' && testBasename !== 'size_attributes')
                     return;
 
                 test(testName, function () {
