@@ -64,7 +64,7 @@ fs.readdirSync(relative('./data')).forEach(function (suiteName) {
                     expected = fs.readFileSync(relative('./data', suiteName, testBasename + '.html')).toString(),
                     testName = testBasename.replace(/_/g, ' ');
 
-                if(testBasename !== 'tags' && testBasename !== 'size_attributes')
+                if(testBasename !== 'tags' && testBasename !== 'size_attributes' && testBasename!== 'offset_attributes')
                     return;
 
                 test(testName, function () {
