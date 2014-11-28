@@ -11,7 +11,7 @@ function relative() {
 }
 
 function normalizeSpaces(str) {
-    return str.replace(/\r\n/g, '\n');
+    return str.trim().replace(/\r\n/g, '\n');
 }
 
 //Diff message
@@ -63,9 +63,6 @@ fs.readdirSync(relative('./data')).forEach(function (suiteName) {
                     src = fs.readFileSync(relative('./data', suiteName, testFile)).toString(),
                     expected = fs.readFileSync(relative('./data', suiteName, testBasename + '.html')).toString(),
                     testName = testBasename.replace(/_/g, ' ');
-
-                if(testBasename !== 'tags' && testBasename !== 'size_attributes' && testBasename!== 'offset_attributes')
-                    return;
 
                 test(testName, function () {
                     var actual = normalizeSpaces(compiler.compile(src));
