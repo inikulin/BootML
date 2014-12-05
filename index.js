@@ -1,11 +1,16 @@
-var ineed = require('ineed');
+var ineed = require('ineed'),
+    GridTranspiler = require('./lib/grid'),
+    ResourceShorthandsTranspiler = require('./lib/resource_shorthands'),
+    Common = require('./lib/common');
 
 //-------------------------------------------------===------------------------------------------------------
 //                                                Transpilers
 //-------------------------------------------------===------------------------------------------------------
+
 var TRANSPILERS = {
-    'resourceShorthands' : require('./lib/resource_shorthands_transpiler'),
-    'grid': require('./lib/grid_transpiler')
+    'indentTracker': Common.IndentTracker,
+    'resourceShorthands': ResourceShorthandsTranspiler,
+    'grid': GridTranspiler
 };
 
 //-------------------------------------------------===------------------------------------------------------
@@ -23,9 +28,11 @@ Object.keys(TRANSPILERS).forEach(function (name) {
                 transpiler = new TRANSPILERS[name](ctx);
 
             ['onStartTag', 'onEndTag', 'onText', 'onComment'].forEach(function (handler) {
-                plugin[handler] = function (token) {
-                    return transpiler[handler](token);
-                };
+                if (transpiler[handler]) {
+                    plugin[handler] = function (token) {
+                        return transpiler[handler](token);
+                    };
+                }
             });
         }
     });
@@ -41,6 +48,7 @@ Object.keys(TRANSPILERS).forEach(function (name) {
 //-------------------------------------------------===------------------------------------------------------
 //                                        Compiler entry point
 //-------------------------------------------------===------------------------------------------------------
+
 exports.compile = function (html) {
     return reprocess.fromHtml(html);
 };
