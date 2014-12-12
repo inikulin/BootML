@@ -1,14 +1,15 @@
 var ineed = require('ineed'),
     GridTranspiler = require('./lib/grid'),
     ResourceShorthandsTranspiler = require('./lib/resource_shorthands'),
-    Common = require('./lib/common');
+    IndentTracker = require('./lib/indent_tracker'),
+    ReprocessorPatch = require('./lib/reprocessor_patch');
 
 //-------------------------------------------------===------------------------------------------------------
 //                                                Transpilers
 //-------------------------------------------------===------------------------------------------------------
 
 var TRANSPILERS = {
-    'indentTracker': Common.IndentTracker,
+    'indentTracker': IndentTracker,
     'resourceShorthands': ResourceShorthandsTranspiler,
     'grid': GridTranspiler
 };
@@ -39,7 +40,7 @@ Object.keys(TRANSPILERS).forEach(function (name) {
 });
 
 //Enable reprocessors
-var reprocess = ineed.reprocess;
+var reprocess = ReprocessorPatch.apply(ineed.reprocess);
 
 Object.keys(TRANSPILERS).forEach(function (name) {
     reprocess = reprocess[name]();
