@@ -4,9 +4,9 @@
 
 *Write less, bootstrap more*
 
-1. Grid tags
-2. Text to markdown
-3. `raw` tag and attribute
-4. `<scripts>` and `<stylesheets>` tags
-5. Includes
-6. Templates
+ * [x] Grid tags
+ * [ ] Text to markdown
+ * [ ] Text to markdown and `raw` attribute
+ * [x] `<scripts>` and `<stylesheets>` tags
+ * [ ] Includes
+ * [ ] Templates
